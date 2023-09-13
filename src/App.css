@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    background: rgb(240, 240, 240);
+    color: #333;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  h1 {
+    text-align: center;
+    color: #333;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .todo-wrapper {
+    background: #fff;
+    padding: 2%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
   }
-}
+  
+  .todo-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .todo-input-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 25px;
+  }
+  
+  .todo-input-item label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .todo-input-item input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+  }
+  
+  .todo-input-item input:focus {
+    outline: none;
+    border-color: #da0303;
+  }
+  
+  .primaryBtn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 25px;
+    padding: 10px 20px;
+    width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .primaryBtn:hover {
+    background-color:#ff0000;
+  }
+  
+  .secondaryBtn1 {
+    background-color:   #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 25px;
+    border-radius: 50px 0px 0px 50px;
+-moz-border-radius: 50px 0px 0px 50px;
+-webkit-border-radius: 50px 0px 0px 50px;
+border: 0px solid #000000;
+    padding: 10px 20px;
+    width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .secondaryBtn2 {
+    background-color: #6c7d7d;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 25px;
+    border-radius: 0px 50px 50px 0px;
+-moz-border-radius: 0px 50px 50px 0px;
+-webkit-border-radius: 0px 50px 50px 0px;
+border: 0px solid #000000;
+    padding: 10px 20px;
+    width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    
+  }
+
+  .secondaryBtn1.active {
+    background-color: #ff0000;
+  }
+  .secondaryBtn2.active {
+    background-color: #ff0000;
+  }
+
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .btn-area {
+    margin-bottom: 50px;
+  }
+  
+  .todo-list-item {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+  }
+  
+  .todo-list-item h3 {
+    font-size: 25px;
+    color: #333;
+    font-weight: bold;
+    margin: 0px;
+  }
+  
+  .todo-list-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .icon {
+    font-size: 35px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .icon:hover {
+    color: red;
+  }
+  
+  .check-icon {
+    font-size: 22px;
+    cursor: pointer;
+    color: #007bff;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+  }
+  
+  .check-icon:hover {
+    color: #0056b3;
+  }
+  
+  #complete{
+    color:green; 
+    font-weight: bold   ;
+  }
